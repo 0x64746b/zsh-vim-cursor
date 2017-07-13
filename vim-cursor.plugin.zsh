@@ -7,10 +7,12 @@ export VIINS_CURSOR_COLOR="#268bd2"
 
 change-cursor() {
     # change cursor shape
+    #  https://stackoverflow.com/a/42118416/1666398
     echo -ne "\e[$1 q"
 
     if [[ -n $2 ]]; then
         # change cursor color
+        #  http://ass.kameli.org/cursor_tricks.html
         echo -ne "\e]12;$2\x7"
     fi
 }
